@@ -151,5 +151,3 @@ if id is even, us `"row-reverse"` as prop value, otherwise pass nothing
 ```jsx
 <StyledCard layout={id % 2 === 0 && "row-reverse"}>
 ```
-
-```jsx```
