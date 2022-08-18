@@ -1,7 +1,9 @@
 export const myTheme = {
   colors: {
-    header: "pink",
+    header: "#ebfbff",
     bg: "#fefefe",
-    footer: "blue",
+    footer: "#003333",
   },
+
+  mobile: "765px",
 };

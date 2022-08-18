@@ -3,6 +3,9 @@ import { myTheme } from "./components/syled/Theme";
 import { GlobalStyles } from "./components/syled/Global";
 import { Container } from "./components/syled/Container.styled";
 import Header from "./components/Header";
+import content from "./content";
+import Card from "./components/Card";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,8 +14,17 @@ function App() {
         <GlobalStyles />
         <Header />
         <Container>
-          <h1>Hello useless bitch, go and die somewhere</h1>
+          <Card item={content[0]} />
+          <Card item={content[1]} />
+          <Card item={content[2]} />
+          {/* NO IDEA WAY MAPPING AINT WORKING T.T */}
+          {/* {content.map((item, idx) => {
+            console.log(item.title, "before");
+            <Card item={item} key={idx} />;
+            console.log(item.title, "after");
+          })} */}
         </Container>
+        <Footer />
       </>
     </ThemeProvider>
   );

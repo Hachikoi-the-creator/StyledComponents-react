@@ -12,6 +12,8 @@
     - [Style Variables SASS-like](#style-variables-sass-like)
     - [Global styles](#global-styles)
   - [Styled img](#styled-img)
+  - [Advanced prop destructuring](#advanced-prop-destructuring)
+  - [Advanced ternary](#advanced-ternary)
 
 # Intro
 **Landing page from Fron end mentor & Based on tutorial by Traversity Media**
@@ -125,6 +127,29 @@ export const Logo = styled.img`
 `;
 ```
 
+## Advanced prop destructuring
+```jsx
+export default function Card({ item: { id, title, content, img } }) {
+  return (
+    <div>
+      <div>
+        <h2>{title}</h2>
+        <p>{content}</p>
+      </div>
 
-```jsx```
+      <div>
+        <img src={`/imgs/${img}`} alt="" />
+      </div>
+    </div>
+  );
+}
+```
+
+## Advanced ternary
+if id is even, us `"row-reverse"` as prop value, otherwise pass nothing
+
+```jsx
+<StyledCard layout={id % 2 === 0 && "row-reverse"}>
+```
+
 ```jsx```
